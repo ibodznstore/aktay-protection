@@ -70,15 +70,15 @@ textarea {
   position: relative;
   z-index: 102;
   display: block;
-  width: 120px;
-  height: 68px;
+  width: 140px;
+  height: 72px;
 }
 
 .brand-logo {
   position: absolute;
   inset: 0;
-  width: 120px;
-  height: 68px;
+  width: 140px;
+  height: 72px;
   object-fit: contain;
   transition: opacity 250ms ease;
 }
@@ -161,6 +161,12 @@ textarea {
   backdrop-filter: blur(14px);
 }
 
+.site-header.is-scrolled.menu-is-open {
+  background: transparent;
+  color: var(--paper);
+  backdrop-filter: none;
+}
+
 .site-header.is-scrolled .desktop-nav,
 .site-header.is-scrolled .header-phone {
   visibility: hidden;
@@ -172,9 +178,9 @@ textarea {
   z-index: 102;
   right: 0;
   display: none;
-  width: 40px;
-  height: 40px;
-  padding: 9px 4px;
+  width: 48px;
+  height: 48px;
+  padding: 12px 6px;
   border: 0;
   background: transparent;
   color: inherit;
@@ -183,28 +189,28 @@ textarea {
 
 .menu-toggle span {
   position: absolute;
-  left: 4px;
-  width: 32px;
+  left: 6px;
+  width: 36px;
   height: 1.5px;
   background: currentColor;
   transition: transform 300ms ease, top 300ms ease;
 }
 
 .menu-toggle span:first-child {
-  top: 14px;
+  top: 17px;
 }
 
 .menu-toggle span:last-child {
-  top: 25px;
+  top: 30px;
 }
 
 .menu-toggle[aria-expanded="true"] span:first-child {
-  top: 20px;
+  top: 23px;
   transform: rotate(45deg);
 }
 
 .menu-toggle[aria-expanded="true"] span:last-child {
-  top: 20px;
+  top: 23px;
   transform: rotate(-45deg);
 }
 
@@ -1257,8 +1263,8 @@ textarea {
 
   .brand,
   .brand-logo {
-    width: 120px;
-    height: 60px;
+    width: 140px;
+    height: 64px;
   }
 
   .menu-toggle {
