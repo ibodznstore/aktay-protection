@@ -1,0 +1,44 @@
+import Image from "next/image";
+
+const navLinks = [
+  ["Start", "/#hero"],
+  ["Über uns", "/#about"],
+  ["Leistungen", "/#service"],
+  ["Faq", "/#faq"],
+  ["Kontakt", "/#contact"],
+];
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-main">
+        <a className="footer-brand" href="/#hero" aria-label="Zurück zum Anfang">
+          <Image src="/images/logo-white.avif" alt="Aktay Protection" width={200} height={200} />
+        </a>
+
+        <nav className="footer-nav" aria-label="Fußnavigation">
+          {navLinks.map(([label, href]) => (
+            <a key={href} href={href}>{label}</a>
+          ))}
+        </nav>
+
+        <address className="footer-address">
+          <p>Aktay Al Zahab Protection GmbH</p>
+          <p>Nicolaiplatz 14–15</p>
+          <p>14770 Brandenburg an der Havel</p>
+          <p>Amtsgericht Potsdam</p>
+          <p>HRB 42490 P</p>
+        </address>
+      </div>
+
+      <div className="footer-bottom">
+        <p>
+          <a href="/legals/impressum">Impressum</a>
+          <span aria-hidden="true">•</span>
+          <a href="/legals/terms-conditions">Datenschutzrichtlinie</a>
+        </p>
+        <p>Vertreten durch die Geschäftsführerin: Nour Abdal Khalek</p>
+      </div>
+    </footer>
+  );
+}
