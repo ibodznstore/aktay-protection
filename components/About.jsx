@@ -4,7 +4,8 @@ import Stats from "./Stats";
 export default function About() {
   return (
     <section className="about" id="about" aria-labelledby="about-title">
-      <div className="about-grid">
+      <div className="about-inner">
+        <div className="about-grid">
         <div data-reveal>
           <SectionLabel>Über uns</SectionLabel>
         </div>
@@ -31,8 +32,9 @@ export default function About() {
             und einem hohen Maß an Diskretion.
           </p>
         </div>
+        </div>
+        <Stats />
       </div>
-      <Stats />
     </section>
   );
 }

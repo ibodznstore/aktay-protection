@@ -44,15 +44,16 @@ export default function FAQ() {
 
   return (
     <section className="faq" id="faq" aria-labelledby="faq-title">
-      <div className="faq-intro" data-reveal>
+      <div className="faq-inner">
+        <div className="faq-intro" data-reveal>
         <SectionLabel>FAQ</SectionLabel>
         <h2 id="faq-title">Ihre Fragen, beantwortet</h2>
         <p>
           Hier finden Sie schnelle Antworten auf die häufigsten Fragen zu unseren
           Dienstleistungen und unserem Ablauf.
         </p>
-      </div>
-      <div className="faq-list" data-reveal>
+        </div>
+        <div className="faq-list" data-reveal>
         {entries.map((entry, index) => (
           <FAQItem
             key={entry.question}
@@ -64,6 +65,7 @@ export default function FAQ() {
             {entry.answer}
           </FAQItem>
         ))}
+        </div>
       </div>
     </section>
   );

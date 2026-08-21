@@ -11,7 +11,8 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-main">
+      <div className="footer-inner">
+        <div className="footer-main">
         <a className="footer-brand" href="/#hero" aria-label="Zurück zum Anfang">
           <Image src="/images/logo-white.avif" alt="Aktay Protection" width={200} height={200} />
         </a>
@@ -29,15 +30,16 @@ export default function Footer() {
           <p>Amtsgericht Potsdam</p>
           <p>HRB 42490 P</p>
         </address>
-      </div>
+        </div>
 
-      <div className="footer-bottom">
+        <div className="footer-bottom">
         <p>
           <a href="/legals/impressum">Impressum</a>
           <span aria-hidden="true">•</span>
           <a href="/legals/terms-conditions">Datenschutzrichtlinie</a>
         </p>
         <p>Vertreten durch die Geschäftsführerin: Nour Abdal Khalek</p>
+        </div>
       </div>
     </footer>
   );

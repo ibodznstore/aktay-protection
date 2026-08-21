@@ -1,4 +1,29 @@
+import localFont from "next/font/local";
 import "./globals.css";
+
+const monaSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/mona-sans-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/mona-sans-500.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/mona-sans-600.woff2",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "sans-serif"],
+  variable: "--font-mona-sans",
+});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -50,8 +75,8 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="de">
-      <body>{children}</body>
+    <html lang="de" className={monaSans.variable}>
+      <body className={monaSans.className}>{children}</body>
     </html>
   );
 }
