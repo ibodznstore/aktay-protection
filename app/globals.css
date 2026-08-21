@@ -70,15 +70,15 @@ textarea {
   position: relative;
   z-index: 102;
   display: block;
-  width: 88px;
-  height: 58px;
+  width: 120px;
+  height: 68px;
 }
 
 .brand-logo {
   position: absolute;
   inset: 0;
-  width: 88px;
-  height: 58px;
+  width: 120px;
+  height: 68px;
   object-fit: contain;
   transition: opacity 250ms ease;
 }
@@ -334,10 +334,12 @@ textarea {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(82px, 10.55vw, 160px);
-  font-weight: 500;
-  line-height: 0.82;
-  letter-spacing: -0.07em;
+  font-size: clamp(82px, 11.52vw, 193px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  text-align: center;
+  white-space: nowrap;
   white-space: nowrap;
   animation: rise-in 1s 100ms ease both;
 }
@@ -536,8 +538,10 @@ textarea {
 .service-copy {
   display: flex;
   min-width: 0;
+  height: 334px;
   min-height: 334px;
   flex-direction: column;
+  align-self: start;
 }
 
 .service-number {
@@ -933,8 +937,8 @@ textarea {
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) 130px 300px;
-  gap: 30px;
+  grid-template-columns: minmax(300px, 1fr) 130px minmax(340px, 380px);
+  column-gap: 40px;
 }
 
 .footer-brand {
@@ -968,6 +972,8 @@ textarea {
 }
 
 .footer-address {
+  padding-left: 40px;
+  border-left: 1px solid rgba(242, 242, 242, 0.2);
   font-style: normal;
 }
 
@@ -1171,6 +1177,15 @@ textarea {
     font-size: 15px;
   }
 
+  .footer-main {
+    grid-template-columns: minmax(220px, 1fr) 120px minmax(280px, 330px);
+    column-gap: 24px;
+  }
+
+  .footer-address {
+    padding-left: 24px;
+  }
+
   .faq {
     display: block;
     min-height: 699px;
@@ -1242,8 +1257,8 @@ textarea {
 
   .brand,
   .brand-logo {
-    width: 64px;
-    height: 48px;
+    width: 120px;
+    height: 60px;
   }
 
   .menu-toggle {
@@ -1273,9 +1288,10 @@ textarea {
   }
 
   .hero h1 {
-    font-size: clamp(51px, 15vw, 78px);
-    line-height: 0.9;
-    white-space: normal;
+    font-size: clamp(36px, 10.75vw, 48px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
   }
 
   .mobile-menu {
@@ -1359,6 +1375,7 @@ textarea {
   }
 
   .service-copy {
+    height: auto;
     min-height: 0;
   }
 
@@ -1490,6 +1507,12 @@ textarea {
 
   .footer-address p {
     margin-bottom: 10px;
+  }
+
+  .footer-address {
+    padding: 32px 0 0;
+    border-top: 1px solid rgba(242, 242, 242, 0.2);
+    border-left: 0;
   }
 
   .footer-bottom {
