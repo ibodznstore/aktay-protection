@@ -38,11 +38,6 @@ export const metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
-  },
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -76,6 +71,21 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de" className={monaSans.variable}>
+      <head>
+        <link
+          rel="icon"
+          href="/icon.png?v=2"
+          type="image/png"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          href="/images/logo-white.avif?v=2"
+          type="image/avif"
+          media="(prefers-color-scheme: dark)"
+        />
+        <link rel="apple-touch-icon" href="/icon.png?v=2" />
+      </head>
       <body className={monaSans.className}>{children}</body>
     </html>
   );

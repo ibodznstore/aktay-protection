@@ -30,20 +30,6 @@ export default function Careers() {
         </div>
 
         <form className="application-form" onSubmit={submitApplication} data-reveal>
-          <div className="form-row">
-            <label>
-              <span>Name</span>
-              <input name="name" type="text" autoComplete="name" required />
-            </label>
-            <label>
-              <span>E-Mail</span>
-              <input name="email" type="email" autoComplete="email" required />
-            </label>
-          </div>
-          <label>
-            <span>Telefon</span>
-            <input name="phone" type="tel" autoComplete="tel" />
-          </label>
           <label>
             <span>Nachricht</span>
             <textarea

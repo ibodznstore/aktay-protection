@@ -226,7 +226,7 @@ textarea {
   visibility: hidden;
   flex-direction: column;
   justify-content: space-between;
-  padding: 128px var(--gutter) 48px;
+  padding: 128px 0 48px;
   background: rgba(15, 15, 15, 0.985);
   color: var(--paper);
   opacity: 0;
@@ -242,8 +242,10 @@ textarea {
 
 .mobile-menu nav {
   display: flex;
+  width: min(calc(100% - (2 * var(--gutter))), var(--container));
   flex-direction: column;
-  align-items: flex-end;
+  align-items: stretch;
+  margin: 0 auto;
 }
 
 .mobile-menu nav a {
@@ -251,20 +253,22 @@ textarea {
   align-items: baseline;
   gap: 24px;
   padding: 14px 0;
-  justify-content: flex-end;
-  width: min(100%, 620px);
+  justify-content: space-between;
+  width: 100%;
   border-bottom: 1px solid rgba(242, 242, 242, 0.16);
   font-size: clamp(36px, 10vw, 60px);
   letter-spacing: -0.04em;
 }
 
 .mobile-menu nav span {
-  width: 26px;
+  width: auto;
   font-size: 11px;
   letter-spacing: 0;
 }
 
 .mobile-phone {
+  width: min(calc(100% - (2 * var(--gutter))), var(--container));
+  margin: 0 auto;
   font-size: 18px;
 }
 
@@ -333,12 +337,6 @@ textarea {
   height: 18px;
   flex: 0 0 auto;
   stroke-width: 1.75;
-  transition: transform 220ms ease;
-}
-
-.text-cta:hover .cta-icon,
-.text-cta:focus-visible .cta-icon {
-  transform: translate(3px, -3px);
 }
 
 .hero h1 {
@@ -919,12 +917,6 @@ textarea {
   height: 18px;
   flex: 0 0 auto;
   stroke-width: 1.75;
-  transition: transform 220ms ease;
-}
-
-.submit-button:hover .button-icon,
-.submit-button:focus-visible .button-icon {
-  transform: translate(3px, -3px);
 }
 
 .form-status {
@@ -1004,10 +996,10 @@ textarea {
 }
 
 .footer-bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 130px minmax(340px, 380px);
   align-items: flex-end;
-  justify-content: space-between;
-  gap: 28px;
+  column-gap: 40px;
   font-size: 16px;
 }
 
@@ -1017,8 +1009,14 @@ textarea {
 
 .footer-bottom p:first-child {
   display: flex;
+  grid-column: 1 / 3;
   align-items: center;
   gap: 9px;
+}
+
+.footer-bottom p:last-child {
+  grid-column: 3;
+  padding-left: 40px;
 }
 
 .legal-header {
@@ -1050,12 +1048,6 @@ textarea {
   height: 18px;
   flex: 0 0 auto;
   stroke-width: 1.75;
-  transition: transform 180ms ease;
-}
-
-.legal-back:hover .legal-back-icon,
-.legal-back:focus-visible .legal-back-icon {
-  transform: translateX(-3px);
 }
 
 .legal-page {
@@ -1217,7 +1209,16 @@ textarea {
     column-gap: 24px;
   }
 
+  .footer-bottom {
+    grid-template-columns: minmax(220px, 1fr) 120px minmax(280px, 330px);
+    column-gap: 24px;
+  }
+
   .footer-address {
+    padding-left: 24px;
+  }
+
+  .footer-bottom p:last-child {
     padding-left: 24px;
   }
 
@@ -1330,7 +1331,7 @@ textarea {
   }
 
   .mobile-menu {
-    padding: 112px 16px 38px;
+    padding: 112px 0 38px;
   }
 
   .mobile-menu nav a {
@@ -1551,10 +1552,15 @@ textarea {
   }
 
   .footer-bottom {
+    display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: 28px;
     font-size: 14px;
+  }
+
+  .footer-bottom p:last-child {
+    padding-left: 0;
   }
 
   .legal-header {
