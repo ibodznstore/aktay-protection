@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "./SectionLabel";
 
 export default function Careers() {
@@ -77,7 +78,7 @@ export default function Careers() {
 
           <button className="submit-button" type="submit">
             <span>Senden</span>
-            <span aria-hidden="true">↗</span>
+            <ArrowUpRight className="button-icon" aria-hidden="true" />
           </button>
           {status ? <p className="form-status" role="status">{status}</p> : null}
         </form>

@@ -328,13 +328,16 @@ textarea {
   line-height: 1;
 }
 
-.text-cta span:last-child {
-  font-size: 19px;
+.text-cta .cta-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  stroke-width: 1.75;
   transition: transform 220ms ease;
 }
 
-.text-cta:hover span:last-child,
-.text-cta:focus-visible span:last-child {
+.text-cta:hover .cta-icon,
+.text-cta:focus-visible .cta-icon {
   transform: translate(3px, -3px);
 }
 
@@ -911,6 +914,19 @@ textarea {
   color: var(--ink);
 }
 
+.submit-button .button-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  stroke-width: 1.75;
+  transition: transform 220ms ease;
+}
+
+.submit-button:hover .button-icon,
+.submit-button:focus-visible .button-icon {
+  transform: translate(3px, -3px);
+}
+
 .form-status {
   margin: 0;
   color: #555;
@@ -1027,6 +1043,19 @@ textarea {
   align-items: center;
   gap: 10px;
   font-size: 14px;
+}
+
+.legal-back-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  stroke-width: 1.75;
+  transition: transform 180ms ease;
+}
+
+.legal-back:hover .legal-back-icon,
+.legal-back:focus-visible .legal-back-icon {
+  transform: translateX(-3px);
 }
 
 .legal-page {

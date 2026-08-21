@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -20,7 +21,7 @@ export default function Hero() {
           </p>
           <a className="text-cta text-cta-light" href="#contact">
             <span>Jetzt Anfragen</span>
-            <span aria-hidden="true">↗</span>
+            <ArrowUpRight className="cta-icon" aria-hidden="true" />
           </a>
         </div>
         <h1 id="hero-title">

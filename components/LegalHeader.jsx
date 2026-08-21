@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 
 export default function LegalHeader() {
   return (
@@ -7,7 +8,7 @@ export default function LegalHeader() {
         <Image src="/icon.png" alt="Aktay Protection" width={200} height={200} />
       </a>
       <a className="legal-back" href="/">
-        <span aria-hidden="true">←</span>
+        <ArrowLeft className="legal-back-icon" aria-hidden="true" />
         Zurück zur Startseite
       </a>
     </header>
