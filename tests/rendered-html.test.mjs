@@ -36,6 +36,10 @@ test("server-renders the Aktay Protection home page", async () => {
   assert.match(html, /Doormen- und Pfortendienste/);
   assert.match(html, /Nächste Leistung: Baustellenbewachung/);
   assert.match(html, /Bewerben Sie sich jetzt/);
+  assert.match(html, /action="https:\/\/usebasin\.com\/f\/fe98cd7a463e"/);
+  assert.match(html, /enctype="multipart\/form-data"/i);
+  assert.match(html, /name="resume"/);
+  assert.doesNotMatch(html, /Noch nicht versendet/);
   assert.match(html, /\/legals\/impressum/);
   assert.doesNotMatch(html, /react-loading-skeleton/);
 });
@@ -76,4 +80,6 @@ test("server-renders the legal overview and required legal pages", async () => {
   assert.match(privacyHtml, /ChatGPT Sites/);
   assert.match(privacyHtml, /Google Maps/);
   assert.match(privacyHtml, /§ 26 Abs\. 1 BDSG/);
+  assert.match(privacyHtml, /Moonshot Ventures Inc\./);
+  assert.match(privacyHtml, /https:\/\/usebasin\.com\/dpa/);
 });

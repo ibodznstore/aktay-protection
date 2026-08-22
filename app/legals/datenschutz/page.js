@@ -108,17 +108,41 @@ export default function PrivacyPage() {
             <section id="bewerbung">
               <h2>6. Bewerbungen</h2>
               <p>
-                Das dargestellte Bewerbungsformular ist derzeit nicht mit einem
-                Übermittlungsdienst verbunden. Eingaben und ausgewählte Dateien
-                werden nicht an uns gesendet. Wird das Formular aktiviert,
-                verarbeiten wir Bewerbungsdaten ausschließlich zur Entscheidung über
-                die Begründung eines Beschäftigungsverhältnisses auf Grundlage von
-                § 26 Abs. 1 BDSG. Vor der Aktivierung ergänzen wir an dieser Stelle
-                den eingesetzten Dienstleister, Empfänger, Speicherort,
-                Speicherdauer, Löschfristen und gegebenenfalls Informationen zu
-                Drittlandübermittlungen. Eine darüber hinausgehende Speicherung für
-                spätere Stellen erfolgt nur auf Grundlage einer gesonderten,
-                freiwilligen Einwilligung.
+                Wenn Sie das Bewerbungsformular absenden, verarbeiten wir Ihre
+                Nachricht und den hochgeladenen Lebenslauf zur Entscheidung über die
+                Begründung eines Beschäftigungsverhältnisses. Rechtsgrundlage ist
+                § 26 Abs. 1 BDSG. Pflichtangaben sind im Formular gekennzeichnet.
+                Bitte übermitteln Sie keine Informationen, die für Ihre Bewerbung
+                nicht erforderlich sind, insbesondere keine unnötigen besonderen
+                Kategorien personenbezogener Daten.
+              </p>
+              <p>
+                Zur Übermittlung und vorübergehenden Speicherung nutzen wir Basin,
+                einen Dienst der Moonshot Ventures Inc. mit Sitz in British Columbia,
+                Kanada. Beim Absenden werden die eingegebenen Daten, die Datei sowie
+                technische Metadaten wie IP-Adresse, Browserinformationen, Herkunft
+                und Zeitpunkt der Übermittlung an Basin übertragen. Basin verarbeitet
+                diese Daten als Auftragsverarbeiter. Für Kanada besteht für
+                kommerzielle Organisationen ein Angemessenheitsbeschluss der
+                Europäischen Kommission; soweit Unterauftragsverarbeiter in weiteren
+                Drittländern eingesetzt werden, verwendet Basin nach eigenen Angaben
+                geeignete Garantien wie Standardvertragsklauseln. Weitere
+                Informationen finden Sie in den Hinweisen von Basin zu {" "}
+                <a href="https://usebasin.com/gdpr" target="_blank" rel="noreferrer">
+                  Datenschutz und DSGVO
+                </a>
+                , im {" "}
+                <a href="https://usebasin.com/dpa" target="_blank" rel="noreferrer">
+                  Auftragsverarbeitungsvertrag
+                </a>
+                {" "}und in der {" "}
+                <a href="https://usebasin.com/privacy" target="_blank" rel="noreferrer">
+                  Datenschutzerklärung von Basin
+                </a>.
+              </p>
+              <p>
+                Eine darüber hinausgehende Speicherung für spätere Stellen erfolgt
+                nur auf Grundlage einer gesonderten, freiwilligen Einwilligung.
               </p>
             </section>
 
@@ -127,10 +151,9 @@ export default function PrivacyPage() {
               <p>
                 Zugriff auf personenbezogene Daten erhalten nur Stellen, die diese
                 zur Erfüllung der genannten Zwecke benötigen. Dazu können
-                Hosting-Anbieter, E-Mail-Dienstleister und nach Aktivierung des
-                Bewerbungsformulars ein Formulardienstleister gehören. Mit
-                Auftragsverarbeitern werden die gesetzlich erforderlichen
-                Vereinbarungen geschlossen.
+                Hosting-Anbieter, E-Mail-Dienstleister und für Bewerbungen Basin als
+                Formulardienstleister gehören. Mit Auftragsverarbeitern werden die
+                gesetzlich erforderlichen Vereinbarungen geschlossen.
               </p>
             </section>
 
@@ -141,8 +164,14 @@ export default function PrivacyPage() {
                 entfällt und keine gesetzlichen Aufbewahrungs-, Nachweis- oder
                 Verjährungsfristen entgegenstehen. Technische Protokolldaten werden
                 nach den für den Hosting-Dienst geltenden Fristen verarbeitet.
-                Konkrete Fristen für Bewerbungen werden vor Aktivierung des
-                Bewerbungsformulars festgelegt und hier veröffentlicht.
+                Über Basin übermittelte Bewerbungen werden dort entsprechend der
+                für das Formular festgelegten Aufbewahrungsfrist, derzeit höchstens
+                30 Tage, gespeichert. Unsere eigenen Kopien erfolgloser Bewerbungen
+                löschen wir grundsätzlich spätestens sechs Monate nach Abschluss des
+                Bewerbungsverfahrens, sofern keine längere Aufbewahrung gesetzlich
+                erforderlich oder zur Rechtsverteidigung notwendig ist. Bei einer
+                Einstellung werden erforderliche Unterlagen in die Personalakte
+                übernommen.
               </p>
             </section>
 

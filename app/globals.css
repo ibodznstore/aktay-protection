@@ -971,6 +971,16 @@ textarea {
   color: var(--ink);
 }
 
+.submit-button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.submit-button:disabled:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .submit-button .button-icon {
   width: 18px;
   height: 18px;
@@ -983,6 +993,14 @@ textarea {
   color: #555;
   font-size: 12px;
   line-height: 1.35;
+}
+
+.form-status.is-success {
+  color: #28613b;
+}
+
+.form-status.is-error {
+  color: #9b2c2c;
 }
 
 .footer {
