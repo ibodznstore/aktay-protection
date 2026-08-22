@@ -37,8 +37,8 @@ export default function ImpressumPage() {
             <section>
               <h2>Kontakt</h2>
               <p>
-                Telefon: <a href="tel:+4933813465601">(+49) 3381 3465601</a><br />
-                E-Mail: <a href="mailto:aktayprotection@gmail.com">aktayprotection@gmail.com</a>
+                Telefon: (+49) 3381 3465601<br />
+                E-Mail: aktayprotection@gmail.com
               </p>
             </section>
           </div>

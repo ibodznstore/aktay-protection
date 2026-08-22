@@ -19,9 +19,8 @@ export default function PrivacyPage() {
             <h2>1. Verantwortliche Stelle</h2>
             <p>
               Aktay Al Zahab Protection GmbH, Nicolaiplatz 14–15, 14770 Brandenburg
-              an der Havel. Sie erreichen uns unter{" "}
-              <a href="mailto:aktayprotection@gmail.com">aktayprotection@gmail.com</a>
-              {" "}oder <a href="tel:+4933813465601">(+49) 3381 3465601</a>.
+              an der Havel. Sie erreichen uns unter aktayprotection@gmail.com oder
+              {" "}(+49) 3381 3465601.
             </p>
             </section>
             <section>

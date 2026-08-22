@@ -1101,12 +1101,6 @@ textarea {
   line-height: 1.6;
 }
 
-.legal-page section a {
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .legal-copy {
   display: grid;
   gap: 54px;
