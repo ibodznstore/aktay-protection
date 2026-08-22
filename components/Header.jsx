@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const links = [
-  ["Start", "/#hero"],
-  ["Über uns", "/#about"],
-  ["Leistungen", "/#service"],
+  ["Start", "/#startseite"],
+  ["Über uns", "/#ueber-uns"],
+  ["Leistungen", "/#leistungen"],
   ["Faq", "/#faq"],
-  ["Kontakt", "/contact#contact"],
+  ["Kontakt", "/contact#kontakt"],
 ];
 
 export default function Header({ forceCompact = false }) {
@@ -19,7 +19,7 @@ export default function Header({ forceCompact = false }) {
     if (forceCompact) return undefined;
 
     const updateHeader = () => {
-      const heroHeight = document.querySelector("#hero")?.offsetHeight || window.innerHeight;
+      const heroHeight = document.querySelector("#startseite")?.offsetHeight || window.innerHeight;
       const headerHeight = document.querySelector(".site-header")?.offsetHeight || 68;
       setScrolled(window.scrollY >= heroHeight - headerHeight - 1);
     };
@@ -49,7 +49,7 @@ export default function Header({ forceCompact = false }) {
       data-compact={forceCompact || undefined}
     >
       <div className="header-inner">
-        <a className="brand" href="/#hero" aria-label="Aktay Protection – Startseite">
+        <a className="brand" href="/#startseite" aria-label="Aktay Protection – Startseite">
           <Image
             className="brand-logo brand-logo-light"
             src="/images/logo-white.avif"

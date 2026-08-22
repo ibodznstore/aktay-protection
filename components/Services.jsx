@@ -63,11 +63,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="services" id="service" aria-labelledby="services-title">
+    <section className="services" id="leistungen" aria-labelledby="leistungen-title">
       <div className="services-layout">
         <div className="services-intro">
           <SectionLabel light>Leistungen</SectionLabel>
-          <h2 id="services-title">Was wir schützen</h2>
+          <h2 id="leistungen-title">Was wir schützen</h2>
           <p>Sicherheit beginnt mit einem verlässlichen Partner.</p>
         </div>
         <div className="services-list">

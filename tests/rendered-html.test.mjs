@@ -36,6 +36,11 @@ test("server-renders the Aktay Protection home page", async () => {
   assert.match(html, /Doormen- und Pfortendienste/);
   assert.match(html, /Nächste Leistung: Baustellenbewachung/);
   assert.match(html, /Bewerben Sie sich jetzt/);
+  assert.match(html, /id="startseite"/);
+  assert.match(html, /id="ueber-uns"/);
+  assert.match(html, /id="leistungen"/);
+  assert.match(html, /id="karriere"/);
+  assert.doesNotMatch(html, /id="(?:hero|about|service|careers)"/);
   assert.match(html, /action="https:\/\/usebasin\.com\/f\/fe98cd7a463e"/);
   assert.match(html, /enctype="multipart\/form-data"/i);
   assert.match(html, /name="resume"/);
@@ -51,6 +56,8 @@ test("server-renders the standalone contact page", async () => {
   const html = await response.text();
   assert.match(html, /<title>Kontakt \| Aktay Protection/);
   assert.match(html, /Nehmen Sie Kontakt auf/);
+  assert.match(html, /id="kontakt"/);
+  assert.doesNotMatch(html, /id="contact"/);
   assert.match(html, /name="email"/);
   assert.match(html, /name="service"/);
   assert.doesNotMatch(html, /maps\.google\.com\/maps/);

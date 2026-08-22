@@ -16,12 +16,12 @@ export default function ContactPage() {
   return (
     <main className="contact-page" id="main-content">
       <Header forceCompact />
-      <section className="contact-section" id="contact" aria-labelledby="contact-title">
+      <section className="contact-section" id="kontakt" aria-labelledby="kontakt-title">
         <div className="contact-inner">
           <div className="contact-heading" data-reveal>
             <SectionLabel>Kontakt</SectionLabel>
             <div className="contact-heading-row">
-              <h1 id="contact-title">Nehmen Sie Kontakt auf</h1>
+              <h1 id="kontakt-title">Nehmen Sie Kontakt auf</h1>
               <p>
                 Teilen Sie uns Ihre Anforderungen mit, und wir melden uns mit einem
                 klaren nächsten Schritt bei Ihnen.

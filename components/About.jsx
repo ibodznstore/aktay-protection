@@ -3,14 +3,14 @@ import Stats from "./Stats";
 
 export default function About() {
   return (
-    <section className="about" id="about" aria-labelledby="about-title">
+    <section className="about" id="ueber-uns" aria-labelledby="ueber-uns-title">
       <div className="about-inner">
         <div className="about-grid">
         <div data-reveal>
           <SectionLabel>Über uns</SectionLabel>
         </div>
         <div className="about-copy" data-reveal>
-          <h2 id="about-title">Sicherheit beginnt mit Vertrauen.</h2>
+          <h2 id="ueber-uns-title">Sicherheit beginnt mit Vertrauen.</h2>
           <p>
             Die Aktay Al Zahab Protection GmbH steht für Zuverlässigkeit,
             Verantwortungsbewusstsein und professionellen Schutz.

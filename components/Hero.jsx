@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="hero" id="hero" aria-labelledby="hero-title">
+    <section className="hero" id="startseite" aria-labelledby="startseite-title">
       <Image
         className="hero-image"
         src="/images/hero.webp"
@@ -19,12 +19,12 @@ export default function Hero() {
             Ihre Sicherheit steht bei uns an erster Stelle. Diskret, professionell
             und rund um die Uhr für Sie im Einsatz.
           </p>
-          <a className="text-cta text-cta-light" href="/contact#contact">
+          <a className="text-cta text-cta-light" href="/contact#kontakt">
             <span>Jetzt Anfragen</span>
             <ArrowUpRight className="cta-icon" aria-hidden="true" />
           </a>
         </div>
-        <h1 id="hero-title">
+        <h1 id="startseite-title">
           Aktay Protection<sup>®</sup>
         </h1>
       </div>

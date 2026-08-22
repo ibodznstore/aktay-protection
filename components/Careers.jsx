@@ -74,11 +74,11 @@ export default function Careers() {
   };
 
   return (
-    <section className="careers" id="careers" aria-labelledby="careers-title">
+    <section className="careers" id="karriere" aria-labelledby="karriere-title">
       <div className="careers-panel">
         <div className="careers-copy" data-reveal>
           <SectionLabel>Karriere</SectionLabel>
-          <h2 id="careers-title">Bewerben Sie sich jetzt</h2>
+          <h2 id="karriere-title">Bewerben Sie sich jetzt</h2>
           <p>
             Unsere Tätigkeit im Bewachungsgewerbe beginnt nach Erteilung der
             erforderlichen Erlaubnis gemäß §34a GewO

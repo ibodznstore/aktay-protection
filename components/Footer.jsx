@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const navLinks = [
-  ["Start", "/#hero"],
-  ["Über uns", "/#about"],
-  ["Leistungen", "/#service"],
+  ["Start", "/#startseite"],
+  ["Über uns", "/#ueber-uns"],
+  ["Leistungen", "/#leistungen"],
   ["Faq", "/#faq"],
-  ["Kontakt", "/contact#contact"],
+  ["Kontakt", "/contact#kontakt"],
 ];
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-main">
-        <a className="footer-brand" href="/#hero" aria-label="Zurück zum Anfang">
+        <a className="footer-brand" href="/#startseite" aria-label="Zurück zum Anfang">
           <Image src="/images/logo-white.avif" alt="Aktay Protection" width={200} height={200} />
         </a>
 
