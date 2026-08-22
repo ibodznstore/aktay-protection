@@ -5,7 +5,7 @@ const navLinks = [
   ["Über uns", "/#about"],
   ["Leistungen", "/#service"],
   ["Faq", "/#faq"],
-  ["Kontakt", "/#contact"],
+  ["Kontakt", "/contact#contact"],
 ];
 
 export default function Footer() {

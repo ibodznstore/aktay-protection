@@ -4,18 +4,20 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const links = [
-  ["Start", "#hero"],
-  ["Über uns", "#about"],
-  ["Leistungen", "#service"],
-  ["Faq", "#faq"],
-  ["Kontakt", "#contact"],
+  ["Start", "/#hero"],
+  ["Über uns", "/#about"],
+  ["Leistungen", "/#service"],
+  ["Faq", "/#faq"],
+  ["Kontakt", "/contact#contact"],
 ];
 
-export default function Header() {
+export default function Header({ forceCompact = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (forceCompact) return undefined;
+
     const updateHeader = () => {
       const heroHeight = document.querySelector("#hero")?.offsetHeight || window.innerHeight;
       const headerHeight = document.querySelector(".site-header")?.offsetHeight || 68;
@@ -29,7 +31,7 @@ export default function Header() {
       window.removeEventListener("scroll", updateHeader);
       window.removeEventListener("resize", updateHeader);
     };
-  }, []);
+  }, [forceCompact]);
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", menuOpen);
@@ -43,10 +45,11 @@ export default function Header() {
 
   return (
     <header
-      className={`site-header ${scrolled ? "is-scrolled" : ""} ${menuOpen ? "menu-is-open" : ""}`}
+      className={`site-header ${scrolled || forceCompact ? "is-scrolled" : ""} ${menuOpen ? "menu-is-open" : ""}`}
+      data-compact={forceCompact || undefined}
     >
       <div className="header-inner">
-        <a className="brand" href="#hero" aria-label="Aktay Protection – Startseite">
+        <a className="brand" href="/#hero" aria-label="Aktay Protection – Startseite">
           <Image
             className="brand-logo brand-logo-light"
             src="/images/logo-white.avif"

@@ -19,7 +19,7 @@ export default function Hero() {
             Ihre Sicherheit steht bei uns an erster Stelle. Diskret, professionell
             und rund um die Uhr für Sie im Einsatz.
           </p>
-          <a className="text-cta text-cta-light" href="#contact">
+          <a className="text-cta text-cta-light" href="/contact#contact">
             <span>Jetzt Anfragen</span>
             <ArrowUpRight className="cta-icon" aria-hidden="true" />
           </a>

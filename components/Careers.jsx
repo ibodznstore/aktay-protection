@@ -18,7 +18,7 @@ export default function Careers() {
   };
 
   return (
-    <section className="careers" id="contact" aria-labelledby="careers-title">
+    <section className="careers" id="careers" aria-labelledby="careers-title">
       <div className="careers-panel">
         <div className="careers-copy" data-reveal>
           <SectionLabel>Karriere</SectionLabel>
