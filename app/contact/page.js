@@ -5,6 +5,7 @@ import FAQ from "../../components/FAQ";
 import Careers from "../../components/Careers";
 import Footer from "../../components/Footer";
 import ScrollReveal from "../../components/ScrollReveal";
+import { ArrowUpRight } from "lucide-react";
 
 export const metadata = {
   title: "Kontakt | Aktay Protection",
@@ -33,11 +34,21 @@ export default function ContactPage() {
             <div className="contact-details">
               <div className="contact-map">
                 <iframe
-                  src="https://maps.google.com/maps?q=52.41151859650407%2C%2012.54747794570078&z=10&output=embed"
+                  src="https://maps.google.com/maps?q=52.41151859650407%2C12.54747794570078&z=16&output=embed"
                   title="Standort von Aktay Protection in Brandenburg an der Havel"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
                 />
+                <a
+                  className="contact-map-link"
+                  href="https://www.google.com/maps/dir/?api=1&destination=52.41151859650407%2C12.54747794570078"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>In Google Maps öffnen</span>
+                  <ArrowUpRight aria-hidden="true" />
+                </a>
               </div>
               <div className="contact-info">
                 <div>

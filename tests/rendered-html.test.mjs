@@ -50,5 +50,7 @@ test("server-renders the standalone contact page", async () => {
   assert.match(html, /name="email"/);
   assert.match(html, /name="service"/);
   assert.match(html, /maps\.google\.com\/maps/);
+  assert.match(html, /52\.41151859650407%2C12\.54747794570078/);
+  assert.match(html, /In Google Maps öffnen/);
   assert.match(html, /aktayprotection@gmail\.com/);
 });
