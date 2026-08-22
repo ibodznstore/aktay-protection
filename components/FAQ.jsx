@@ -13,9 +13,9 @@ const entries = [
     question: "Wie können Sie uns kontaktieren?",
     answer: (
       <p>
-        E-Mail: <a href="mailto:aktayprotection@gmail.com">aktayprotection@gmail.com</a>
+        E-Mail: aktayprotection@gmail.com
         <br />
-        Telefon: <a href="tel:+4933813465601">(+49) 3381 3465601</a>
+        Telefon: (+49) 3381 3465601
       </p>
     ),
   },

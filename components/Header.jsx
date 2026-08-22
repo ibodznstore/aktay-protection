@@ -74,9 +74,9 @@ export default function Header() {
           ))}
         </nav>
 
-        <a className="header-phone" href="tel:+4933813465601">
+        <span className="header-phone">
           (+49) 3381 3465601
-        </a>
+        </span>
 
         <button
           className="menu-toggle"
@@ -100,9 +100,9 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a className="mobile-phone" href="tel:+4933813465601">
+        <p className="mobile-phone">
           (+49) 3381 3465601
-        </a>
+        </p>
       </div>
     </header>
   );

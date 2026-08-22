@@ -120,8 +120,7 @@ textarea {
   transition: opacity 180ms ease;
 }
 
-.desktop-nav a::after,
-.header-phone::after {
+.desktop-nav a::after {
   position: absolute;
   right: 0;
   bottom: -5px;
@@ -135,16 +134,12 @@ textarea {
 }
 
 .desktop-nav a:hover,
-.desktop-nav a:focus-visible,
-.header-phone:hover,
-.header-phone:focus-visible {
+.desktop-nav a:focus-visible {
   opacity: 1;
 }
 
 .desktop-nav a:hover::after,
-.desktop-nav a:focus-visible::after,
-.header-phone:hover::after,
-.header-phone:focus-visible::after {
+.desktop-nav a:focus-visible::after {
   transform: scaleX(1);
   transform-origin: left;
 }
