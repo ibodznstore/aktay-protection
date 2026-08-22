@@ -25,11 +25,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::selection {
-  background: var(--ink);
-  color: var(--paper);
-}
-
 body.menu-open {
   overflow: hidden;
 }
@@ -1031,8 +1026,8 @@ textarea {
 
 .legal-header-inner > a:first-child,
 .legal-header img {
-  width: 72px;
-  height: 58px;
+  width: 140px;
+  height: 72px;
   object-fit: contain;
 }
 
@@ -1561,8 +1556,8 @@ textarea {
 
   .legal-header-inner > a:first-child,
   .legal-header img {
-    width: 58px;
-    height: 46px;
+    width: 140px;
+    height: 64px;
   }
 
   .legal-back {
