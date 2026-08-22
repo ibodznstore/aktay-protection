@@ -57,8 +57,9 @@ export default function Careers() {
           <label className="consent-field">
             <input name="privacy" type="checkbox" required />
             <span>
-              Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung
-              meiner Daten für diese Bewerbung zu.
+              Ich habe die {" "}
+              <a href="/legals/datenschutz#bewerbung">Datenschutzhinweise für Bewerbungen</a>
+              {" "}zur Kenntnis genommen.
             </span>
           </label>
 

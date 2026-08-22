@@ -942,6 +942,13 @@ textarea {
   accent-color: var(--ink);
 }
 
+.consent-field a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .submit-button {
   display: inline-flex;
   align-items: center;
@@ -1160,6 +1167,68 @@ textarea {
   margin: 110px 0 0 30%;
 }
 
+.legal-copy section p + p {
+  margin-top: 18px;
+}
+
+.legal-copy a,
+.legal-grid a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.legal-document-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: 110px 0 0 30%;
+}
+
+.legal-document-card {
+  display: flex;
+  min-height: 210px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.legal-document-card:hover,
+.legal-document-card:focus-visible {
+  border-color: rgba(15, 15, 15, 0.38);
+  background: rgba(15, 15, 15, 0.025);
+}
+
+.legal-document-card h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.legal-document-card p {
+  max-width: 310px;
+  margin: 0;
+  color: #737373;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.legal-document-card > svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  stroke-width: 1.5;
+}
+
+.legal-overview-copy {
+  margin-top: 64px;
+}
+
 .contact-page {
   background: var(--paper);
 }
@@ -1354,6 +1423,76 @@ textarea {
 .contact-map-link svg {
   width: 16px;
   height: 16px;
+  stroke-width: 1.5;
+}
+
+.contact-map-consent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  background: #e8e8e8;
+  text-align: center;
+}
+
+.contact-map-pin {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.25;
+}
+
+.contact-map-consent-copy {
+  max-width: 410px;
+}
+
+.contact-map-consent-copy strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contact-map-consent-copy p {
+  margin: 0;
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact-map-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.contact-map-actions button,
+.contact-map-actions a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 16px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.contact-map-actions button {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.contact-map-actions svg {
+  width: 15px;
+  height: 15px;
   stroke-width: 1.5;
 }
 
@@ -1567,7 +1706,8 @@ textarea {
   }
 
   .legal-grid,
-  .legal-copy {
+  .legal-copy,
+  .legal-document-grid {
     margin-left: 22%;
   }
 }
@@ -1898,6 +2038,22 @@ textarea {
     height: 280px;
   }
 
+  .contact-map-consent {
+    height: auto;
+    min-height: 280px;
+    padding: 28px 18px;
+  }
+
+  .contact-map-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .contact-map-actions button,
+  .contact-map-actions a {
+    width: 100%;
+  }
+
   .contact-info {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1907,14 +2063,21 @@ textarea {
     font-size: 52px;
   }
 
-  .legal-grid {
+  .legal-grid,
+  .legal-document-grid {
     grid-template-columns: 1fr;
   }
 
   .legal-grid,
-  .legal-copy {
+  .legal-copy,
+  .legal-document-grid {
     gap: 42px;
     margin: 74px 0 0;
+  }
+
+  .legal-document-card {
+    min-height: 180px;
+    padding: 24px;
   }
 }
 

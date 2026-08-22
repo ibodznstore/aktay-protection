@@ -49,8 +49,31 @@ test("server-renders the standalone contact page", async () => {
   assert.match(html, /Nehmen Sie Kontakt auf/);
   assert.match(html, /name="email"/);
   assert.match(html, /name="service"/);
-  assert.match(html, /maps\.google\.com\/maps/);
-  assert.match(html, /52\.41151859650407%2C12\.54747794570078/);
-  assert.match(html, /In Google Maps öffnen/);
+  assert.doesNotMatch(html, /maps\.google\.com\/maps/);
+  assert.match(html, /52\.41151859650407,12\.54747794570078/);
+  assert.match(html, /Google Maps anzeigen/);
+  assert.match(html, /Karte laden/);
   assert.match(html, /aktayprotection@gmail\.com/);
+});
+
+test("server-renders the legal overview and required legal pages", async () => {
+  const overviewResponse = await render("/legals");
+  assert.equal(overviewResponse.status, 200);
+  const overviewHtml = await overviewResponse.text();
+  assert.match(overviewHtml, /Rechtliche Informationen/);
+  assert.match(overviewHtml, /\/legals\/impressum/);
+  assert.match(overviewHtml, /\/legals\/datenschutz/);
+
+  const impressumResponse = await render("/legals/impressum");
+  assert.equal(impressumResponse.status, 200);
+  const impressumHtml = await impressumResponse.text();
+  assert.match(impressumHtml, /Gewerbebehörde/);
+  assert.match(impressumHtml, /§ 34a Gewerbeordnung/);
+
+  const privacyResponse = await render("/legals/datenschutz");
+  assert.equal(privacyResponse.status, 200);
+  const privacyHtml = await privacyResponse.text();
+  assert.match(privacyHtml, /ChatGPT Sites/);
+  assert.match(privacyHtml, /Google Maps/);
+  assert.match(privacyHtml, /§ 26 Abs\. 1 BDSG/);
 });
