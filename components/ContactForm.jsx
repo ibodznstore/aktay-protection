@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 
 const serviceOptions = [
   "Objektschutz",
@@ -53,12 +53,15 @@ export default function ContactForm() {
 
       <label className="contact-field">
         <span>Leistung</span>
-        <select name="service" defaultValue="" required>
-          <option value="" disabled>Wählen…</option>
-          {serviceOptions.map((option) => (
-            <option key={option} value={option}>{option}</option>
-          ))}
-        </select>
+        <span className="contact-select">
+          <select name="service" defaultValue="" required>
+            <option value="" disabled>Wählen…</option>
+            {serviceOptions.map((option) => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+          <ChevronDown className="contact-select-icon" aria-hidden="true" />
+        </span>
       </label>
 
       <label className="contact-field">

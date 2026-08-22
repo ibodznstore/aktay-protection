@@ -1248,6 +1248,28 @@ textarea {
   transition: border-color 180ms ease;
 }
 
+.contact-select {
+  position: relative;
+  display: block;
+}
+
+.contact-select select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 46px;
+}
+
+.contact-select-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  stroke-width: 1.5;
+  transform: translateY(-50%);
+}
+
 .contact-field textarea {
   min-height: 100px;
   resize: vertical;
