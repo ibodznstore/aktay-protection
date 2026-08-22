@@ -31,6 +31,10 @@ test("server-renders the Aktay Protection home page", async () => {
   assert.match(html, /<title>Aktay Protection/);
   assert.match(html, /Sicherheit beginnt mit Vertrauen/);
   assert.match(html, /Objektschutz/);
+  assert.match(html, /Baustellenbewachung/);
+  assert.match(html, /Videoüberwachung/);
+  assert.match(html, /Doormen- und Pfortendienste/);
+  assert.match(html, /Nächste Leistung: Baustellenbewachung/);
   assert.match(html, /Bewerben Sie sich jetzt/);
   assert.match(html, /\/legals\/impressum/);
   assert.doesNotMatch(html, /react-loading-skeleton/);

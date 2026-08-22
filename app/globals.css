@@ -541,6 +541,13 @@ textarea {
   align-self: start;
 }
 
+.service-slide-copy {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  animation: service-slide-in 380ms cubic-bezier(0.23, 0.83, 0.56, 1) both;
+}
+
 .service-number {
   margin: 0 0 26px;
   color: #b5b5b5;
@@ -585,22 +592,64 @@ textarea {
   transition: filter 500ms ease;
 }
 
-.service-indicator {
+.service-slide-image {
   position: absolute;
-  right: 16px;
-  bottom: 16px;
+  inset: 0;
+  animation: service-image-in 420ms ease both;
+}
+
+.service-carousel-control {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 10px;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 107px;
   min-height: 44px;
-  padding: 6px 14px;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 4px 4px 14px;
+  border: 1px solid rgba(242, 242, 242, 0.22);
   border-radius: 999px;
-  background: var(--paper);
-  color: var(--ink);
+  background: rgba(15, 15, 15, 0.82);
+  color: var(--paper);
+  cursor: pointer;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
+  backdrop-filter: blur(8px);
+}
+
+.service-carousel-arrow {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.service-carousel-arrow svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.75;
+}
+
+.service-carousel-control:hover,
+.service-carousel-control:focus-visible {
+  border-color: rgba(242, 242, 242, 0.55);
+  background: rgba(15, 15, 15, 0.94);
+}
+
+@keyframes service-slide-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes service-image-in {
+  from { opacity: 0.35; }
+  to { opacity: 1; }
 }
 
 .faq {
@@ -1424,9 +1473,9 @@ textarea {
     height: 334px;
   }
 
-  .service-indicator {
-    right: 16px;
-    bottom: 16px;
+  .service-carousel-control {
+    right: 10px;
+    bottom: 10px;
   }
 
   .faq {

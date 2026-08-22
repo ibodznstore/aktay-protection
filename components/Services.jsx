@@ -24,11 +24,40 @@ const services = [
     alt: "Sicherheitsmitarbeiter bei einer Zugangskontrolle",
   },
   {
-    title: "Revier- und Streifendienst",
-    description: "Kontrollfahrten sichern Ihre Objekte und klären Auffälligkeiten schnell.",
-    features: "Kontrollen · Verschlüsse · Alarmverfolgung",
-    image: "/images/service-patrol.avif",
-    alt: "Sicherheitskontrolle auf einem Außengelände",
+    slides: [
+      {
+        number: "04",
+        title: "Revier- und Streifendienst",
+        description: "Kontrollfahrten sichern Ihre Objekte und klären Auffälligkeiten schnell.",
+        features: "Kontrollen · Verschlüsse · Alarmverfolgung",
+        image: "/images/service-patrol.avif",
+        alt: "Sicherheitskontrolle auf einem Außengelände",
+      },
+      {
+        number: "05",
+        title: "Baustellenbewachung",
+        description: "Sicherer Schutz für Baustellen, Material und Maschinen – auch nach Feierabend.",
+        features: "Zutritt · Kontrollgänge · Materialschutz",
+        image: "/images/service-construction.avif",
+        alt: "Sicherheitsmitarbeiter kontrollieren eine Baustelle",
+      },
+      {
+        number: "06",
+        title: "Videoüberwachung",
+        description: "Gefährdete Bereiche im Blick, Auffälligkeiten früh erkannt.",
+        features: "Live-Bild · Dokumentation · Alarmverfolgung",
+        image: "/images/service-video.avif",
+        alt: "Überwachungskameras im Außenbereich",
+      },
+      {
+        number: "07",
+        title: "Doormen- und Pfortendienste",
+        description: "Ein professioneller erster Eindruck mit kontrolliertem Zugang.",
+        features: "Einlass · Registrierung · Empfang",
+        image: "/images/service-doormen.avif",
+        alt: "Doorman am Eingang eines Gebäudes",
+      },
+    ],
   },
 ];
 
@@ -44,7 +73,7 @@ export default function Services() {
         <div className="services-list">
           {services.map((service, index) => (
             <ServiceCard
-              key={service.title}
+              key={service.title || service.slides[0].title}
               service={service}
               index={index}
             />
