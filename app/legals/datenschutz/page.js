@@ -84,14 +84,23 @@ export default function PrivacyPage() {
             <section id="kontakt">
               <h2>4. Kontaktaufnahme</h2>
               <p>
-                Das Kontaktformular öffnet das auf Ihrem Gerät eingerichtete
-                E-Mail-Programm. Formulardaten werden nicht zuvor auf unserer Website
-                gespeichert. Sobald Sie uns eine E-Mail senden oder telefonisch
-                kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der
-                Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bei
+                Wenn Sie das Kontaktformular absenden, verarbeiten wir Ihren Namen,
+                Ihre E-Mail-Adresse, die ausgewählte Leistung und Ihre Nachricht zur
+                Bearbeitung Ihrer Anfrage. Pflichtangaben sind im Formular
+                gekennzeichnet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bei
                 vorvertraglichen Anfragen und im Übrigen Art. 6 Abs. 1 lit. f DSGVO.
                 Unser berechtigtes Interesse liegt in der Beantwortung geschäftlicher
                 Anfragen. Gesetzliche Aufbewahrungspflichten bleiben unberührt.
+              </p>
+              <p>
+                Zur Übermittlung und vorübergehenden Speicherung des Kontaktformulars
+                nutzen wir Basin, einen Dienst der Moonshot Ventures Inc. mit Sitz in
+                British Columbia, Kanada. Beim Absenden werden die eingegebenen Daten
+                sowie technische Metadaten wie IP-Adresse, Browserinformationen,
+                Herkunft und Zeitpunkt der Übermittlung an Basin übertragen. Die
+                weiteren Hinweise zu Basin, möglichen Drittlandübermittlungen und den
+                eingesetzten Garantien finden Sie im Abschnitt {" "}
+                <a href="#bewerbung">Bewerbungen</a>.
               </p>
             </section>
 
@@ -165,7 +174,7 @@ export default function PrivacyPage() {
                 Zugriff auf personenbezogene Daten erhalten nur Stellen, die diese
                 zur Erfüllung der genannten Zwecke benötigen. Dazu können
                 Vercel als Hosting-Anbieter, STRATO als Domain- und DNS-Anbieter,
-                E-Mail-Dienstleister und für Bewerbungen Basin als
+                E-Mail-Dienstleister und für Kontaktanfragen sowie Bewerbungen Basin als
                 Formulardienstleister gehören. Mit Auftragsverarbeitern werden die
                 gesetzlich erforderlichen Vereinbarungen geschlossen.
               </p>

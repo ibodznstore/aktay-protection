@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 
+const BASIN_ENDPOINT = "https://usebasin.com/f/fe98cd7a463e";
+
 const serviceOptions = [
   "Objektschutz",
   "Veranstaltungsschutz",
@@ -16,25 +18,52 @@ const serviceOptions = [
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");
+  const [statusType, setStatusType] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const submitContact = (event) => {
+  const submitContact = async (event) => {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    const subject = `Kontaktanfrage – ${form.get("service")}`;
-    const body = [
-      `Name: ${form.get("name") || "–"}`,
-      `E-Mail: ${form.get("email")}`,
-      `Leistung: ${form.get("service")}`,
-      "",
-      form.get("message") || "Keine zusätzliche Nachricht.",
-    ].join("\n");
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-    setStatus("Ihr E-Mail-Programm wird geöffnet. Die Nachricht wird erst nach Ihrer Bestätigung versendet.");
-    window.location.href = `mailto:aktayprotection@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setIsSubmitting(true);
+    setStatusType("");
+    setStatus("Ihre Anfrage wird gesendet …");
+
+    try {
+      const response = await fetch(BASIN_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Basin returned ${response.status}`);
+      }
+
+      form.reset();
+      setStatusType("success");
+      setStatus("Vielen Dank. Ihre Anfrage wurde erfolgreich gesendet.");
+    } catch {
+      setStatusType("error");
+      setStatus(
+        "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder senden Sie uns eine E-Mail.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <form className="contact-form" onSubmit={submitContact}>
+    <form
+      className="contact-form"
+      action={BASIN_ENDPOINT}
+      method="POST"
+      acceptCharset="UTF-8"
+      onSubmit={submitContact}
+    >
+      <input type="hidden" name="_gotcha" value="" />
+      <input type="hidden" name="formular" value="Kontaktanfrage" />
       <label className="contact-field">
         <span>Name</span>
         <input name="name" type="text" autoComplete="name" placeholder="Jane Smith" />
@@ -73,11 +102,24 @@ export default function ContactForm() {
         />
       </label>
 
-      <button className="contact-submit" type="submit">
-        <span>Senden</span>
+      <p className="contact-form-privacy">
+        Mit dem Absenden gelten unsere {" "}
+        <a href="/legals/datenschutz#kontakt">Datenschutzhinweise zur Kontaktaufnahme</a>.
+      </p>
+
+      <button className="contact-submit" type="submit" disabled={isSubmitting}>
+        <span>{isSubmitting ? "Wird gesendet …" : "Senden"}</span>
         <ArrowUpRight aria-hidden="true" />
       </button>
-      {status ? <p className="contact-form-status" role="status">{status}</p> : null}
+      {status ? (
+        <p
+          className={`contact-form-status${statusType ? ` is-${statusType}` : ""}`}
+          role="status"
+          aria-live="polite"
+        >
+          {status}
+        </p>
+      ) : null}
     </form>
   );
 }
