@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <LegalHeader backHref="/legals" backLabel="Rechtliche Informationen" />
       <main className="legal-page legal-page-wide">
         <div className="legal-inner">
-          <p className="legal-eyebrow">Stand: 22. August 2026</p>
+          <p className="legal-eyebrow">Stand: 24. August 2026</p>
           <h1>Datenschutzerklärung</h1>
           <div className="legal-copy">
             <section id="verantwortlicher">
@@ -27,32 +27,45 @@ export default function PrivacyPage() {
             </section>
 
             <section id="hosting">
-              <h2>2. Hosting und technische Bereitstellung</h2>
+              <h2>2. Domain, DNS und Hosting</h2>
               <p>
-                Diese Website wird über ChatGPT Sites bereitgestellt. Anbieter für
-                Nutzer im Europäischen Wirtschaftsraum ist OpenAI Ireland Limited,
-                1st Floor, The Liffey Trust Centre, 117–126 Sheriff Street Upper,
-                Dublin 1, D01 YC43, Irland. Beim Aufruf der Website werden technisch
-                erforderliche Daten wie IP-Adresse, Zeitpunkt, angeforderte Adresse,
-                Browser- und Geräteinformationen sowie Sicherheits- und Fehlerdaten
-                verarbeitet, um die Website auszuliefern, Angriffe abzuwehren und die
-                Stabilität sicherzustellen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f
-                DSGVO. Unser berechtigtes Interesse liegt im sicheren und
-                zuverlässigen Betrieb dieser Website.
+                Die Domain wird bei der STRATO GmbH, Otto-Ostrowski-Straße 7,
+                10249 Berlin, Deutschland, verwaltet. STRATO stellt insbesondere
+                die Domain- und DNS-Verwaltung bereit; die Inhalte dieser Website
+                werden nicht bei STRATO gehostet. Bei der technischen Bereitstellung
+                der Domain- und DNS-Dienste können erforderliche Verbindungs- und
+                Protokolldaten verarbeitet werden. Weitere Informationen finden Sie
+                in den {" "}
+                <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noreferrer">
+                  Datenschutzhinweisen von STRATO
+                </a>.
               </p>
               <p>
-                Soweit OpenAI personenbezogene Daten in unserem Auftrag verarbeitet,
-                erfolgt dies auf Grundlage des ChatGPT Sites Data Processing
-                Addendum. Bei einer Verarbeitung außerhalb des Europäischen
-                Wirtschaftsraums werden nach Angaben des Anbieters geeignete
-                Garantien, insbesondere Standardvertragsklauseln, eingesetzt.
-                Weitere Informationen finden Sie im {" "}
-                <a href="https://openai.com/policies/chatgpt-sites-data-processing-addendum/" target="_blank" rel="noreferrer">
-                  ChatGPT Sites Data Processing Addendum
+                Das Hosting und die weltweite Auslieferung der Website erfolgen
+                über Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723,
+                USA. Beim Aufruf verarbeitet Vercel technisch erforderliche Daten,
+                insbesondere IP-Adresse, Datum und Uhrzeit, aufgerufene Adresse,
+                Referrer, Browser- und Geräteinformationen sowie Sicherheits-,
+                Diagnose- und Fehlerdaten. Die Verarbeitung ist erforderlich, um
+                die Website auszuliefern, Angriffe abzuwehren und ihre Stabilität
+                sicherzustellen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+                Unser berechtigtes Interesse liegt im sicheren und zuverlässigen
+                Betrieb dieser Website.
+              </p>
+              <p>
+                Soweit Vercel personenbezogene Daten in unserem Auftrag verarbeitet,
+                erfolgt dies auf Grundlage des mit Vercel geltenden
+                Auftragsverarbeitungsvertrags. Daten können in den USA und weiteren
+                Ländern verarbeitet werden. Vercel nennt hierfür insbesondere die
+                Zertifizierung nach dem EU-U.S. Data Privacy Framework sowie die
+                EU-Standardvertragsklauseln als Übermittlungsgrundlagen. Weitere
+                Informationen finden Sie im {" "}
+                <a href="https://vercel.com/legal/dpa" target="_blank" rel="noreferrer">
+                  Data Processing Addendum von Vercel
                 </a>
                 {" "}und in der {" "}
-                <a href="https://openai.com/policies/eu-privacy-policy/" target="_blank" rel="noreferrer">
-                  europäischen Datenschutzerklärung von OpenAI
+                <a href="https://vercel.com/legal/privacy-notice" target="_blank" rel="noreferrer">
+                  Datenschutzerklärung von Vercel
                 </a>.
               </p>
             </section>
@@ -151,7 +164,8 @@ export default function PrivacyPage() {
               <p>
                 Zugriff auf personenbezogene Daten erhalten nur Stellen, die diese
                 zur Erfüllung der genannten Zwecke benötigen. Dazu können
-                Hosting-Anbieter, E-Mail-Dienstleister und für Bewerbungen Basin als
+                Vercel als Hosting-Anbieter, STRATO als Domain- und DNS-Anbieter,
+                E-Mail-Dienstleister und für Bewerbungen Basin als
                 Formulardienstleister gehören. Mit Auftragsverarbeitern werden die
                 gesetzlich erforderlichen Vereinbarungen geschlossen.
               </p>
@@ -163,7 +177,8 @@ export default function PrivacyPage() {
                 Personenbezogene Daten werden gelöscht, sobald der jeweilige Zweck
                 entfällt und keine gesetzlichen Aufbewahrungs-, Nachweis- oder
                 Verjährungsfristen entgegenstehen. Technische Protokolldaten werden
-                nach den für den Hosting-Dienst geltenden Fristen verarbeitet.
+                nach den für Vercel und STRATO geltenden beziehungsweise von uns
+                konfigurierten Fristen verarbeitet.
                 Über Basin übermittelte Bewerbungen werden dort entsprechend der
                 für das Formular festgelegten Aufbewahrungsfrist, derzeit höchstens
                 30 Tage, gespeichert. Unsere eigenen Kopien erfolgloser Bewerbungen

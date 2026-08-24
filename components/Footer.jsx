@@ -37,8 +37,6 @@ export default function Footer() {
           <a href="/legals">Rechtliche Informationen</a>
           <span aria-hidden="true">•</span>
           <a href="/legals/impressum">Impressum</a>
-          <span aria-hidden="true">•</span>
-          <a href="/legals/datenschutz">Datenschutzerklärung</a>
         </p>
         <p>Vertreten durch die Geschäftsführerin: Nour Abdal Khalek</p>
         </div>

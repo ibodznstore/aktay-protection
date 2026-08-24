@@ -46,6 +46,11 @@ test("server-renders the Aktay Protection home page", async () => {
   assert.match(html, /name="resume"/);
   assert.doesNotMatch(html, /Noch nicht versendet/);
   assert.match(html, /\/legals\/impressum/);
+  assert.doesNotMatch(
+    html,
+    /<a href="\/legals\/datenschutz">Datenschutzerklärung<\/a>/,
+  );
+  assert.doesNotMatch(html, /ChatGPT|OpenAI/i);
   assert.doesNotMatch(html, /react-loading-skeleton/);
 });
 
@@ -65,6 +70,7 @@ test("server-renders the standalone contact page", async () => {
   assert.match(html, /Google Maps anzeigen/);
   assert.match(html, /Karte laden/);
   assert.match(html, /aktayprotection@gmail\.com/);
+  assert.doesNotMatch(html, /ChatGPT|OpenAI/i);
 });
 
 test("server-renders the legal overview and required legal pages", async () => {
@@ -74,19 +80,27 @@ test("server-renders the legal overview and required legal pages", async () => {
   assert.match(overviewHtml, /Rechtliche Informationen/);
   assert.match(overviewHtml, /\/legals\/impressum/);
   assert.match(overviewHtml, /\/legals\/datenschutz/);
+  assert.doesNotMatch(overviewHtml, /ChatGPT|OpenAI/i);
 
   const impressumResponse = await render("/legals/impressum");
   assert.equal(impressumResponse.status, 200);
   const impressumHtml = await impressumResponse.text();
   assert.match(impressumHtml, /Gewerbebehörde/);
   assert.match(impressumHtml, /§ 34a Gewerbeordnung/);
+  assert.doesNotMatch(impressumHtml, /ChatGPT|OpenAI/i);
 
   const privacyResponse = await render("/legals/datenschutz");
   assert.equal(privacyResponse.status, 200);
   const privacyHtml = await privacyResponse.text();
-  assert.match(privacyHtml, /ChatGPT Sites/);
+  assert.match(privacyHtml, /Vercel Inc\./);
+  assert.match(privacyHtml, /STRATO GmbH/);
+  assert.doesNotMatch(privacyHtml, /ChatGPT|OpenAI/i);
   assert.match(privacyHtml, /Google Maps/);
   assert.match(privacyHtml, /§ 26 Abs\. 1 BDSG/);
   assert.match(privacyHtml, /Moonshot Ventures Inc\./);
   assert.match(privacyHtml, /https:\/\/usebasin\.com\/dpa/);
+
+  const privacyAliasResponse = await render("/legals/terms-conditions");
+  assert.equal(privacyAliasResponse.status, 200);
+  assert.doesNotMatch(await privacyAliasResponse.text(), /ChatGPT|OpenAI/i);
 });

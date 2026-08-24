@@ -1,8 +1,7 @@
 # Aktay Protection
 
 Production-ready Next.js App Router recreation of the Aktay Protection website.
-The project uses JavaScript/JSX, local media assets, and the vinext runtime used
-by OpenAI Sites.
+The project uses JavaScript/JSX, local media assets, and the vinext runtime.
 
 ## Prerequisites
 
@@ -17,8 +16,8 @@ npm run build
 ```
 
 Set `NEXT_PUBLIC_SITE_URL` to the production origin before publishing. The
-application form validates locally and intentionally does not transmit applicant
-data until a secure backend endpoint is connected.
+application form validates CV uploads locally and transmits completed applications
+to its configured Basin endpoint.
 
 ## Commands
 
