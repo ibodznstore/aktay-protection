@@ -1,7 +1,7 @@
 # Aktay Protection
 
 Production-ready Next.js App Router recreation of the Aktay Protection website.
-The project uses JavaScript/JSX, local media assets, and the vinext runtime.
+The project uses JavaScript/JSX, local media assets, and standard Next.js.
 
 ## Prerequisites
 
@@ -10,9 +10,9 @@ The project uses JavaScript/JSX, local media assets, and the vinext runtime.
 ## Quick start
 
 ```bash
-npm install
-npm run dev
-npm run build
+pnpm install
+pnpm dev
+pnpm build
 ```
 
 Set `NEXT_PUBLIC_SITE_URL` to the production origin before publishing. The
@@ -21,7 +21,13 @@ to its configured Basin endpoint.
 
 ## Commands
 
-- `npm run dev`: start local development
-- `npm run build`: create the production vinext bundle
-- `npm run lint`: run static checks
-- `npm test`: build and verify the rendered home page
+- `pnpm dev`: start local development
+- `pnpm build`: create the production Next.js bundle
+- `pnpm lint`: run static checks
+- `pnpm test`: build and verify the site source
+
+## Deployment
+
+Import the GitHub repository into Vercel with the Next.js framework preset.
+Set `NEXT_PUBLIC_SITE_URL` to the final `https://` domain in the Vercel project
+settings before the production deployment.
