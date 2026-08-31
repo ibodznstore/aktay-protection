@@ -25,7 +25,11 @@ export default function ImpressumPage() {
             </section>
             <section>
               <h2>Vertretung</h2>
-              <p>Vertreten durch die Geschäftsführerin: Nour Abdal Khalek</p>
+              <p>
+                <a href="mailto:abdalkhalek@aktayprotection.com">
+                  Vertreten durch die Geschäftsführerin: Nour Abdal Khalek
+                </a>
+              </p>
             </section>
             <section>
               <h2>Registereintrag</h2>
@@ -38,7 +42,8 @@ export default function ImpressumPage() {
               <h2>Kontakt</h2>
               <p>
                 Telefon: (+49) 3381 3465601<br />
-                E-Mail: aktayprotection@gmail.com
+                E-Mail: aktayprotection@gmail.com<br />
+                E-Mail: info@aktayprotection.com
               </p>
             </section>
             <section>

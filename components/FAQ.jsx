@@ -15,6 +15,8 @@ const entries = [
       <p>
         E-Mail: aktayprotection@gmail.com
         <br />
+        E-Mail: info@aktayprotection.com
+        <br />
         Telefon: (+49) 3381 3465601
       </p>
     ),

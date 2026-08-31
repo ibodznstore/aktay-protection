@@ -22,6 +22,7 @@ export default function PrivacyPage() {
                 Nicolaiplatz 14–15<br />
                 14770 Brandenburg an der Havel<br />
                 E-Mail: aktayprotection@gmail.com<br />
+                E-Mail: info@aktayprotection.com<br />
                 Telefon: (+49) 3381 3465601
               </p>
             </section>

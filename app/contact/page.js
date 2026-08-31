@@ -37,6 +37,7 @@ export default function ContactPage() {
                 <div>
                   <span>E-Mail</span>
                   <p>aktayprotection@gmail.com</p>
+                  <p>info@aktayprotection.com</p>
                 </div>
                 <div>
                   <span>Nummer</span>

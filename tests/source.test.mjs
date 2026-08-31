@@ -30,14 +30,18 @@ test("the home page keeps its German section links and Basin form", async () => 
 });
 
 test("the contact and legal pages contain the required production details", async () => {
-  const [contact, contactForm, map, privacy, impressum] = await Promise.all([
+  const [contact, contactForm, footer, faq, map, privacy, impressum] = await Promise.all([
     source("app/contact/page.js"),
     source("components/ContactForm.jsx"),
+    source("components/Footer.jsx"),
+    source("components/FAQ.jsx"),
     source("components/ConsentMap.jsx"),
     source("app/legals/datenschutz/page.js"),
     source("app/legals/impressum/page.js"),
   ]);
   assert.match(contact, /id="kontakt"/);
+  assert.match(contact, /info@aktayprotection\.com/);
+  assert.match(faq, /info@aktayprotection\.com/);
   assert.match(contactForm, /https:\/\/usebasin\.com\/f\/fe98cd7a463e/);
   assert.match(contactForm, /Ihre Anfrage wurde erfolgreich gesendet/);
   assert.doesNotMatch(contactForm, /mailto:/);
@@ -45,6 +49,10 @@ test("the contact and legal pages contain the required production details", asyn
   assert.match(privacy, /Vercel Inc\./);
   assert.match(privacy, /STRATO GmbH/);
   assert.match(privacy, /Moonshot Ventures Inc\./);
+  assert.match(privacy, /info@aktayprotection\.com/);
   assert.match(privacy, /Kontaktanfragen sowie Bewerbungen Basin/);
   assert.match(impressum, /§ 34a Gewerbeordnung/);
+  assert.match(impressum, /info@aktayprotection\.com/);
+  assert.match(footer, /mailto:abdalkhalek@aktayprotection\.com/);
+  assert.match(impressum, /mailto:abdalkhalek@aktayprotection\.com/);
 });

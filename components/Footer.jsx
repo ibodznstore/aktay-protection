@@ -38,7 +38,11 @@ export default function Footer() {
           <span aria-hidden="true">•</span>
           <a href="/legals/impressum">Impressum</a>
         </p>
-        <p>Vertreten durch die Geschäftsführerin: Nour Abdal Khalek</p>
+        <p>
+          <a href="mailto:abdalkhalek@aktayprotection.com">
+            Vertreten durch die Geschäftsführerin: Nour Abdal Khalek
+          </a>
+        </p>
         </div>
       </div>
     </footer>
