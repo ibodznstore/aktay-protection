@@ -80,8 +80,8 @@ export default function Careers() {
           <SectionLabel>Karriere</SectionLabel>
           <h2 id="karriere-title">Bewerben Sie sich jetzt</h2>
           <p>
-            Unsere Tätigkeit im Bewachungsgewerbe beginnt nach Erteilung der
-            erforderlichen Erlaubnis gemäß §34a GewO
+            Wir verfügen nun über die erforderliche Erlaubnis gemäß § 34a GewO
+            und freuen uns auf Ihre Bewerbung.
           </p>
         </div>
 
@@ -95,6 +95,7 @@ export default function Careers() {
           data-reveal
         >
           <input type="hidden" name="_gotcha" value="" />
+          <input type="hidden" name="formular" value="Bewerbung" />
           <label>
             <span>Nachricht</span>
             <textarea

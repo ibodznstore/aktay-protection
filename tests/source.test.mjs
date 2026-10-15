@@ -23,6 +23,8 @@ test("the home page keeps its German section links and Basin form", async () => 
   assert.match(combined, /id="karriere"/);
   assert.match(careers, /https:\/\/usebasin\.com\/f\/fe98cd7a463e/);
   assert.match(careers, /multipart\/form-data/);
+  assert.match(careers, /name="formular" value="Bewerbung"/);
+  assert.match(careers, /verfügen nun über die erforderliche Erlaubnis gemäß § 34a GewO/);
   assert.doesNotMatch(
     footer,
     /<a href="\/legals\/datenschutz">Datenschutzerklärung<\/a>/,
